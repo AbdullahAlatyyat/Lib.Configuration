@@ -10,7 +10,7 @@ example DB config:
 Block
 {
 "Id": 1,
-"Name": "Language",
+"Name": "TestSettings",
 "Description": "Language block"
 }
 
