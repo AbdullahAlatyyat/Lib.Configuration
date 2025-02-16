@@ -57,7 +57,7 @@ namespace Framework.Configuration
 
                 foreach (var property in properties)
                 {
-                    var confValue = environmentSettings.Where(e => e.ConfigurationKey == property.Name).FirstOrDefault()?.ConfigurationValue;
+                    var confValue = environmentSettings.Where(e => e.ConfigurationKey == property.Name && entity.Name == e.ConfigurationBlockName).FirstOrDefault()?.ConfigurationValue;
 
                     var propType = property.PropertyType;
                     var converter = TypeDescriptor.GetConverter(propType);
