@@ -18,7 +18,7 @@ namespace Framework.Configuration
             {
                 dbContext.Database.EnsureCreated();
 
-                var dbList = dbContext.Configurations.Include(e => e.Block).ToList();
+                var dbList = dbContext.Configurations.Include(e => e.Block).OrderBy(e => e.BlockId).ToList();
                 foreach (var entity in dbList)
                 {
                     configurations.Add(new ConfigurationEntity()
